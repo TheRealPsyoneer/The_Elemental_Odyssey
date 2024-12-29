@@ -1,0 +1,4 @@
+29/12/2024
+- Added Player basic animation.
+- Set up Player State Machine. 
+- Player can walk and do basic attack.
