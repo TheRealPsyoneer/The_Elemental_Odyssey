@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5278714925974865813}
   - component: {fileID: 9089598868361032230}
   - component: {fileID: 2878060375996583413}
-  - component: {fileID: 3322973163507709281}
+  - component: {fileID: -736341644301216209}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -155,9 +155,9 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: 95d3605d6ec72314f8d8b4be5ef78047, type: 2}
   states:
   - {fileID: 11400000, guid: a045ebd5254662e43aff9851bdf53c50, type: 2}
-  - {fileID: 11400000, guid: da04ea1f5f3796449b94f681b4fefae2, type: 2}
-  - {fileID: 11400000, guid: f1ac39223c06064498fd230a117339a3, type: 2}
   - {fileID: 11400000, guid: 7a2160f2a56c9cd4ab8146b2a350ca3b, type: 2}
+  - {fileID: 11400000, guid: da04ea1f5f3796449b94f681b4fefae2, type: 2}
+  - {fileID: 11400000, guid: 89085fc93fa75674db4ec5d8853bfe5b, type: 2}
 --- !u!50 &2878060375996583413
 Rigidbody2D:
   serializedVersion: 4
@@ -185,8 +185,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &3322973163507709281
-CapsuleCollider2D:
+--- !u!58 &-736341644301216209
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -217,6 +217,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012769043, y: 0.05426818}
-  m_Size: {x: 0.541656, y: 0.84172714}
-  m_Direction: 0
+  m_Offset: {x: -0.022395834, y: -0.12442216}
+  serializedVersion: 2
+  m_Radius: 0.22621197

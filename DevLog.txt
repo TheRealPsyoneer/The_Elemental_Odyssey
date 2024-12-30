@@ -1,3 +1,6 @@
+30/12/2024
+- Player now can do 3-stage attack combo.
+
 29/12/2024
 - Added Player basic animation.
 - Set up Player State Machine. 

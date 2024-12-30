@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Player States/Walk Horizontal SO", fileName = "Walk Horizontal")]
-
 public class WalkHorizontalStateSO : StateNode
 {
-    Vector2 direction;
-
     public override void Enter()
     {
         player.animator.SetBool("IsWalkingHorizontal", true);
-        direction = player.transform.localScale;
+        Vector2 direction = player.transform.localScale;
         if (player.moveInput.x > 0)
         {
             direction.x = Mathf.Abs(direction.x);
@@ -42,6 +39,5 @@ public class WalkHorizontalStateSO : StateNode
     public override void Exit()
     {
         player.animator.SetBool("IsWalkingHorizontal", false);
-
     }
 }

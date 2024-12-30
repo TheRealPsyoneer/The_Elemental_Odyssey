@@ -10,6 +10,7 @@ public class AttackStateSO : StateNode
     {
         player.animator.SetTrigger("Attack_trig");
         initFrame = Time.time;
+        player.CancelResetAttackComboTime();
     }
 
     public override void Execute()
@@ -24,8 +25,15 @@ public class AttackStateSO : StateNode
 
     public override void Exit()
     {
-        
+        int order = player.animator.GetInteger("AttackOrder");
+        if (order < player.stats.maxCombo)
+        {
+            player.animator.SetInteger("AttackOrder", order + 1);
+        }
+        else
+        {
+            player.animator.SetInteger("AttackOrder", 1);
+        }
+        player.StartResetAttackComboTime();
     }
-
-    
 }

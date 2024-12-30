@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260ee522d3689bf47bbb8123c8e16f96, type: 3}
   m_Name: Walk Horizontal
   m_EditorClassIdentifier: 
-  playerGO: {fileID: 322994870720062573, guid: 2d8ca0fd1dd20204f828475e91cbbc94, type: 3}
+  player: {fileID: 0}

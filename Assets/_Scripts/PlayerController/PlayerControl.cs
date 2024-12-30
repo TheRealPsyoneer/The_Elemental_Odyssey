@@ -15,6 +15,7 @@ public class PlayerControl : MonoBehaviour
 
     public Dictionary<string, StateNode> stateStorage;
     public PlayerStateMachine stateMachine;
+    Coroutine resetAttackComboCoroutine;
 
     void Awake()
     {
@@ -46,12 +47,32 @@ public class PlayerControl : MonoBehaviour
     void OnAttack(InputValue value)
     {
         pressAttack = true;
-        StartCoroutine(ResetAttack());
+        StartCoroutine(ResetPressAttack());
     }
 
-    IEnumerator ResetAttack()
+    IEnumerator ResetPressAttack()
     {
         yield return new WaitForSeconds(Time.deltaTime);
         pressAttack = false;
+    }
+
+    public void StartResetAttackComboTime()
+    {
+        resetAttackComboCoroutine = StartCoroutine(ResetAttackCombo());
+    }
+
+    public void CancelResetAttackComboTime()
+    {
+        if (resetAttackComboCoroutine != null)
+        {
+            StopCoroutine(resetAttackComboCoroutine);
+            resetAttackComboCoroutine = null;
+        }
+    }
+
+    IEnumerator ResetAttackCombo()
+    {
+        yield return new WaitForSeconds(stats.attackComboWaitTime);
+        animator.SetInteger("AttackOrder", 1);
     }
 }

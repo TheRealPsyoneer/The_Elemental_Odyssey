@@ -10,12 +10,13 @@ public class PlayerStateMachine
     public PlayerStateMachine(PlayerControl player)
     {
         this.player = player;
-        currentState = player.stateStorage["Idle"];
-        currentState.player = player;
+        
     }
 
     public void Initialize()
     {
+        currentState = player.stateStorage["Idle"];
+        currentState.player = player;
         currentState.Enter();
     }
 
