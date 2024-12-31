@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateMachine
+public class UnitStateMachine
 {
-    PlayerControl player;
+    UnitControl unit;
     StateNode currentState;
 
-    public PlayerStateMachine(PlayerControl player)
+    public UnitStateMachine(UnitControl unit)
     {
-        this.player = player;
-        
+        this.unit = unit;
     }
 
     public void Initialize()
     {
-        currentState = player.stateStorage["Idle"];
-        currentState.player = player;
+        currentState = unit.stateStorage["Idle"];
+        currentState.unit = unit;
         currentState.Enter();
     }
 
@@ -24,7 +23,7 @@ public class PlayerStateMachine
     {
         currentState.Exit();
         currentState = nextState;
-        currentState.player = player;
+        currentState.unit = unit;
         currentState.Enter();
     }
 

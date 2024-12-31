@@ -6,9 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player Subject SO", fileName = "New Player Subject")]
 public class PlayerSubject : ScriptableObject
 {
-    public event Action<PlayerControl> playerActed;
+    public event Action<UnitControl> playerActed;
 
-    public void Broadcast(PlayerControl player)
+    public void Broadcast(UnitControl player)
     {
         playerActed?.Invoke(player);
     }

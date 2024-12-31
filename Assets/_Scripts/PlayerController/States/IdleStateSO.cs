@@ -5,9 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player States/Idle SO", fileName = "Idle")]
 public class IdleStateSO : StateNode
 {
+    Player player;
     float enterTime;
     public override void Enter()
     {
+        player = (Player) unit;
         enterTime = Time.time;
     }
 
@@ -27,11 +29,6 @@ public class IdleStateSO : StateNode
         {
             player.stateMachine.TransitionTo(player.stateStorage["Attack"]);
         }
-
-        //if (Time.time - enterTime > player.stats.attackComboWaitTime)
-        //{
-        //    player.animator.SetInteger("AttackOrder", 1);
-        //}
     }
 
     public override void Exit()

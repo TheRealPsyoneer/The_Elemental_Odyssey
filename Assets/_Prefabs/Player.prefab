@@ -96,8 +96,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 776832411
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1081796469, guid: c9a3a6b63199c7d498baab6df698a73d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -149,16 +149,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 322994870720062573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9bdce8cc1916c246a3d3f071147acfc, type: 3}
+  m_Script: {fileID: 11500000, guid: a9144f45864d1034d81257a33fdd2863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 95d3605d6ec72314f8d8b4be5ef78047, type: 2}
-  attackEvent: {fileID: 11400000, guid: 68c7422b7ed1fb54495d21b4ee50fd96, type: 2}
   states:
-  - {fileID: 11400000, guid: a045ebd5254662e43aff9851bdf53c50, type: 2}
   - {fileID: 11400000, guid: 7a2160f2a56c9cd4ab8146b2a350ca3b, type: 2}
+  - {fileID: 11400000, guid: a045ebd5254662e43aff9851bdf53c50, type: 2}
   - {fileID: 11400000, guid: da04ea1f5f3796449b94f681b4fefae2, type: 2}
   - {fileID: 11400000, guid: 89085fc93fa75674db4ec5d8853bfe5b, type: 2}
+  stats: {fileID: 11400000, guid: 95d3605d6ec72314f8d8b4be5ef78047, type: 2}
+  attackEvent: {fileID: 11400000, guid: 68c7422b7ed1fb54495d21b4ee50fd96, type: 2}
 --- !u!50 &2878060375996583413
 Rigidbody2D:
   serializedVersion: 4

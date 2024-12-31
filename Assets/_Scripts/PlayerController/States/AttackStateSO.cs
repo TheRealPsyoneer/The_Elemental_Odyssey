@@ -5,22 +5,24 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player States/Attack SO", fileName = "Attack")]
 public class AttackStateSO : StateNode
 {
+    Player player;
     float initFrame;
     public override void Enter()
     {
-        player.animator.SetTrigger("Attack_trig");
+        player = (Player) unit;
+        unit.animator.SetTrigger("Attack_trig");
         initFrame = Time.time;
         player.CancelResetAttackComboTime();
-        player.attackEvent.Broadcast(player);
+        player.attackEvent.Broadcast(unit);
     }
 
     public override void Execute()
     {
         if (Time.time == initFrame) return;
 
-        if (Time.time - initFrame >= player.animator.GetCurrentAnimatorStateInfo(0).length)
+        if (Time.time - initFrame >= unit.animator.GetCurrentAnimatorStateInfo(0).length)
         {
-            player.stateMachine.TransitionTo(player.stateStorage["Idle"]);
+            player.stateMachine.TransitionTo(unit.stateStorage["Idle"]);
         }
     }
 

@@ -5,8 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player States/Walk Vertical SO", fileName = "Walk Vertical")]
 public class WalkVerticalStateSO : StateNode
 {
+    Player player;
     public override void Enter()
     {
+        player = (Player) unit;
         if (player.moveInput.y > 0)
         {
             player.animator.SetBool("IsWalkingUp", true);

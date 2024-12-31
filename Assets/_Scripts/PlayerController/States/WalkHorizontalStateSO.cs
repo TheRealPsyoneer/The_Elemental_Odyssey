@@ -5,8 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player States/Walk Horizontal SO", fileName = "Walk Horizontal")]
 public class WalkHorizontalStateSO : StateNode
 {
+    Player player;
     public override void Enter()
     {
+        player = (Player) unit;
         player.animator.SetBool("IsWalkingHorizontal", true);
         Vector2 direction = player.transform.localScale;
         if (player.moveInput.x > 0)
