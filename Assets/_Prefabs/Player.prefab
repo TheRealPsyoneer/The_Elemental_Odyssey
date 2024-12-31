@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats: {fileID: 11400000, guid: 95d3605d6ec72314f8d8b4be5ef78047, type: 2}
+  attackEvent: {fileID: 11400000, guid: 68c7422b7ed1fb54495d21b4ee50fd96, type: 2}
   states:
   - {fileID: 11400000, guid: a045ebd5254662e43aff9851bdf53c50, type: 2}
   - {fileID: 11400000, guid: 7a2160f2a56c9cd4ab8146b2a350ca3b, type: 2}

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerControl : MonoBehaviour
 {
     public PlayerStats stats;
+    public PlayerSubject attackEvent;
     public List<StateNode> states;
 
     public Vector2 moveInput { get; private set; }

@@ -11,6 +11,7 @@ public class AttackStateSO : StateNode
         player.animator.SetTrigger("Attack_trig");
         initFrame = Time.time;
         player.CancelResetAttackComboTime();
+        player.attackEvent.Broadcast(player);
     }
 
     public override void Execute()
