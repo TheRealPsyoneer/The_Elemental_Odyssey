@@ -6,6 +6,9 @@ using UnityEngine;
 public class PlayerStats : ScriptableObject
 {
     public float walkSpeed;
+
+    [Header("Attack")]
+    public float defaultAttackPressingTime;
     public float attackComboWaitTime;
     public int maxCombo;
 }

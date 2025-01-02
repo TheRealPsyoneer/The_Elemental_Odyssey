@@ -26,7 +26,7 @@ public class Player : UnitControl
 
     IEnumerator ResetPressAttack()
     {
-        yield return new WaitForSeconds(Time.deltaTime);
+        yield return new WaitForSeconds(stats.defaultAttackPressingTime);
         pressAttack = false;
     }
 

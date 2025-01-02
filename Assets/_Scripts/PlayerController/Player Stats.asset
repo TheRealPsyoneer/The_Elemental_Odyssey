@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Player Stats
   m_EditorClassIdentifier: 
   walkSpeed: 5
+  defaultAttackPressingTime: 0.05
   attackComboWaitTime: 0.25
   maxCombo: 3
